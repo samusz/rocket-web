@@ -1,0 +1,20 @@
+[package]
+name = "rocket-web"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# rocket = { git = "http://github.com/SergioBenitez/Rocket", branch = "master" }
+# rocket = "0.4.10"
+rocket = { version = "0.5.0-rc.1", features = ["secrets",  "json"] }    # "tls",
+
+# rocket_contrib = { git = "http://github.com/SergioBenitez/Rocket", branch = "master" }
+# rocket_contrib = "0.4.10"
+rocket_contrib = "0.5.0-rc.1"
+
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+reqwest = { version = "0.10", features = ["json", "rustls-tls"] }
+chrono = { version = "0.4", features = ["serde"] }
